@@ -1,0 +1,176 @@
+--root{
+    --bg-primary:rgb(24, 24, 24);
+}
+html{
+    background-color:var(--bg-primary);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', monospace;
+
+}
+body{
+    background-color:rgb(15,15,15);
+    color:lime;
+}
+/*Top-Navigation*/
+.top-nav-bar{
+    
+    position:sticky;
+    width:auto;
+    border:solid 0.05rem rgb(10,10,10);
+    display:flex;
+    justify-content: space-between;
+    padding-left:3rem;
+    padding-right:3rem;
+    background-color:rgb(20,20,20);
+    text-transform: uppercase;
+    letter-spacing:0.3rem;
+    
+}
+.main-navigation{
+    display:flex;
+    justify-content:space-evenly;
+    margin-left:25%;
+}
+.nav-btn{
+    padding:0.5rem;
+    width:auto;
+    border:0.1rem transparent;
+
+}
+.nav-btn:hover{
+    border-bottom:lime solid 0.1rem;
+    animation:nav-btn 1s;
+    
+}
+
+/*nav btn nimation*/
+@keyframes nav-btn{
+    0%{
+        border-bottom:solid 0.1rem black;
+        opacity:0%;
+    }
+    
+    100%{
+        border-bottom:solid 0.1rem lime;
+        opacity:100%;
+    }
+}
+
+/*nav bar button box*/
+.main-nav-bar-button-box{
+    display:flex;
+    justify-content:space-evenly;
+    grid-gap:0.5rem;
+}
+/*btn animation*/
+@keyframes btn{
+    0%{
+        transform:scale(100%);
+
+    }
+    100%{
+        transform:scale(110%);
+    }
+}
+btn{
+    padding:0.3rem;
+    margin-top:0.5rem;
+    margin-bottom:0.5rem;
+    font-size:0.6rem;
+    border-radius:5%;
+    border:solid 0.05rem rgb(10,10,10);
+}
+btn:hover{
+    transform:scale(110%);
+    animation:btn 0.5s;
+}
+input{
+    
+    
+    color:lime;
+    background-color:rgb(15,15,15);
+    border:solid 0.1rem rgb(10,10,10);
+}
+.search-box{
+    margin-top:0.5rem;
+    margin-bottom:0.5rem;
+    font-size:0.6rem;
+    display:flex;
+    border:0.05rem lime solid;
+    justify-content:space-evenly;
+    
+    box-shadow:0rem 0rem 0.5rem 0.05rem rgb(29, 29, 29);
+}
+.search-box-icon{
+    position:relative;
+    line-height:200%;
+    padding-left:0.5rem;
+    padding-right:0.5rem;
+    letter-spacing:0.05rem;
+    border:0.1rem solid rgb(10,10,10);
+}
+.log-in-btn{
+    background-color:lime;
+    color:black;
+    letter-spacing:0.1rem;
+    font-weight:900;
+    box-shadow:0rem 0rem 1rem 0.05rem rgba(0, 255, 0, 0.438);
+}
+.sign-up-btn{
+    background-color:rgb(111, 0, 255);
+    color:white;
+    box-shadow:0rem 0rem 1rem 0.05rem rgb(111,0,255);
+    letter-spacing:0.1rem;
+    font-weight:900;
+}
+
+/*sidebar*/
+.main-container{
+    display:flex;
+}
+.main{
+    position:relative;
+    width:100%;
+    
+    
+    float:right;
+    overflow:hidden;
+    background-color:rgb(20,20,20);
+    border:solid 0.1rem rgb(10,10,10);
+    box-shadow:0rem 0rem 0rem 0rem white;
+}
+.side-nav-bar{
+    display:flex;
+    position:sticky;
+    float:left;
+    flex-direction:column;
+    background-color:rgb(20,20,20);
+    
+    border:solid 0.1rem rgb(10,10,10);
+    height:100%;
+    
+    
+}
+.icon-label{
+    font-size:0.6rem;
+    text-transform: uppercase;
+    letter-spacing:0.1rem;
+    text-align:center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', monospace;
+    margin-left:0.3rem;
+    margin-right:0.3rem;
+    
+}
+.fas{
+    text-align:center;
+    margin:0rem;
+    padding:1rem;
+    padding-right:0rem;
+    padding-left:0rem;
+    
+}
+.fas:hover{
+    background-color:rgb(111,0,255);
+    color:white;
+    
+}
+

@@ -1,0 +1,69 @@
+
+
+ <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cybrvybe</title>
+    <link rel='stylesheet' type='text/css' href='/static/base/css/base.css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="description" content="Freelance Network">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Alejandro Figueroa">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+   
+</head>
+<body>
+    <div class="top-nav-bar">
+        <nav class="main-navigation">
+            <a class="nav-btn">Feed</a>
+            <a class="nav-btn">Explore</a>
+            <a class="nav-btn">Jobs</a>
+            <a class="nav-btn">Commerce</a>
+            <a class="nav-btn">Teams</a>
+        </nav>
+        
+        <div class="main-nav-bar-button-box">
+            <div class="search-box">
+                <input class="select2-search--dropdown">
+                </input>
+                <icon class="search-box-icon">Search</icon>
+
+            </div>
+            <btn class="log-in-btn">Log In</btn>
+            <btn class="sign-up-btn">New User?</btn>
+
+        </div>
+    </div>
+    <div class="side-nav-bar">
+        <i class="fas fa-user">
+            <h1 class="icon-label">Profile</h1>
+        </i>
+        <i class="fas fa-inbox">
+            <h1 class="icon-label">Messages</h1>
+        </i>
+        <i class="fas fa-bell">
+            <h1 class="icon-label">Notifications</h1>
+        </i>
+        <i class="fas fa-folder">
+            <h1 class="icon-label">Collections</h1>
+        </i>
+        <i class="fas fa-cog">
+            <h1 class="icon-label">Settings</h1>
+        </i>
+        <i class="fas fa-chart-line">
+            <h1 class="icon-label">Analytics</h1>
+        </i>
+    </div>
+    <div class="main">
+        
+        <wrapper class="wrapper">
+            <!--Page-content-->
+            {% block page_content %}{% endblock %}
+        </wrapper>
+    </div>
+
+</body>
+</html> 

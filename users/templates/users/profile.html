@@ -1,0 +1,99 @@
+{% extends "feed/layout.html" %}
+{% load static %}
+
+{% block page_content %}
+    
+<html>     
+<head>
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+</head>
+    
+    
+    <section class ="profile-header">
+        <div class ="profile-header-left-box">
+            <div class="profile-header-name-container">
+                <h1 class="profile-header-label">Name</h1>
+                <div class="name-label-answer">
+                    <h1 class="first-name">{{associated_user.profile.first_name}}</h1>
+                    <h1 class="last-name">{{associated_user.profile.last_name}}</h1>
+                </div>
+            </div>
+            <div class="profile-header-industry-container">
+                <h1 class="profile-header-label">Industry</h1>
+                <div class="industry-label-answer">
+                    <h1 class="industry-name">{{associated_user.profile.industry}}</h1>
+
+                </div>
+            </div>
+            <div class="profile-header-occupational-title-container">
+                <h1 class="profile-header-label">Occupation</h1>
+                <div class="occupational-title-label-answer">
+                    <h1 class="occupational-title">{{associated_user.profile.occupational_title}}</h1>
+                </div>
+            </div>
+            <div class="profile-header-specialization-container">
+                <h1 class="profile-header-label">Specialization</h1>
+                <div class="specialization-label-answer">
+                    <h1 class="specialization">{{associated_user.profile.specialization}}
+                </div>
+            </div>
+        </div>
+        <div class="profile-header-middle-box">
+            <img src = "{{associated_user.profile.profile_pic.url}}" class="profile-pic" ></img>
+            <p class="display-name">{{associated_user.profile.display_name}}</p>
+            <div class="profile-header-button-box">
+                <btn class="follow-btn">+Follow</btn>
+                <btn class="message-btn">Message</btn>
+            </div>
+        </div>
+        <div class="profile-header-right-box">
+            <div class="left-container-of-right-box">
+                <div class="profile-header-count-container">
+                    <div class="friends-count-container">
+                        <h2 class="friends-count-label">Friends</h1>
+                        <h3 class="friends-count">{{friend_count}}</h3>
+                    </div>
+                    <div class="posts-count-container">
+                        <h2 class="posts-count-label">Posts</h1>
+                        <h3 class="posts">{{post_count}}</h3>
+
+                    </div>
+                    <div class="completed-projects-count-container">
+                        <h2 class="completed-projects-label">Completed Projects</h1>
+                        <h3 class="completed-projects">{{projects_count}}
+                    </div>
+                </div>
+                <div class="profile-header-bio-container">
+                    <h1 class="profile-header-label">Bio</h1>
+                    <div class="bio-label-answer">
+                        <p>{{associated_user.profile.bio}}</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="profile-header-social-container">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+            
+        </div>
+    </section>
+    <section class="profile-content">
+        <nav class="profile-navigation">
+            <a class="profile-nav-btn" id="projects-profile-nav-btn">Projects</a>
+            <a class="profile-nav-btn" id="store-profile-nav-btn">Store</a>
+            <a class="profile-nav-btn" id="services-profile-nav-btn">Services</a>
+            <a class="profile-nav-btn" id="blog-profile-nav-btn">Blog</a>
+            <a class="profile-nav-btn" id="photos-profile-nav-btn">Photos</a>
+            <a class="profile-nav-btn" id="videos-profile-nav-btn">Videos</a>
+            <a class="profile-nav-btn" id="about-profile-nav-btn">About</a>
+        </nav>
+    </section>
+    
+	        
+
+</html>
+{% endblock page_content %}
+{% block jsfiles %}{% endblock jsfiles %}
